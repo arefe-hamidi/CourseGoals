@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
-
-import Button from '../../UI/Button/Button';
-import styles from './CourseInput.module.css';
-
+import React, { useState } from "react";
+import stayles from "./CourseInput.module.css";
+import Button from "../../UI/Button/Button";
 const CourseInput = (props) => {
-  const [enteredValue, setEnteredValue] = useState('');
+  const [enteredValue, setEnteredValue] = useState("");
   const [isValid, setIsValid] = useState(true);
 
   const goalInputChangeHandler = (event) => {
@@ -26,7 +24,7 @@ const CourseInput = (props) => {
   return (
     <form onSubmit={formSubmitHandler}>
       <div
-        className={`${styles['form-control']} ${!isValid && styles.invalid}`}
+        className={`${stayles["form-control"]} ${!isValid && stayles.invalid}`}
       >
         <label>Course Goal</label>
         <input type="text" onChange={goalInputChangeHandler} />
